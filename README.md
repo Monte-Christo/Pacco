@@ -11,7 +11,6 @@ Find out more about distributed systems patterns and practices in **[Microservic
 
 [![Microservices .NET](https://cdn.devmentors.io/blog/hello-world-microservices-pacco/microservices_net_pacco_trailer.png)](https://www.youtube.com/watch?v=5SLyrETnJoE)
 
-
 ----------------
 
 The overall solution makes use of the **cloud agnostic** tools and most of them can be found under [cncf.io](https://cncf.io). To easily plug into the complex infrastructure, [Convey](https://convey-stack.github.io) is being used.
@@ -23,7 +22,6 @@ The overall solution makes use of the **cloud agnostic** tools and most of them 
 Depending on the particular microservice complexity, either the clean architecture + DDD approach (as presented below) is used or another style that is the best fit.
 
 ![Clean architecture](https://raw.githubusercontent.com/devmentors/Pacco/master/assets/clean_architecture.png)
-
 
 **Which repositories should I clone?**
 ----------------
@@ -50,18 +48,18 @@ The above repositories can be also cloned via [git-clone.sh](https://github.com/
 
 Open `Pacco/compose` directory and execute:
 
-```
+```bash
 docker-compose -f infrastructure.yml up -d
 ```
 
 It will start the required infrastructure in the background. Then, you can start the services independently of each other via `dotnet run` or `./scripts/start.sh` command in each microservice repository or run them all at once using Docker:
 
-```
+```bash
 docker-compose -f services-local.yml up
 ```
 
 **What HTTP requests can be sent to the API?**
 ----------------
 
-You can find the list of all HTTP requests in [Pacco-sample-scenario.rest](https://github.com/devmentors/Pacco.APIGateway/blob/master/Pacco-sample-scenario.rest) file placed in the root folder of [Pacco.APIGateway](https://github.com/devmentors/Pacco.APIGateway) repository. 
-This file is compatible with [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) plugin for [Visual Studio Code](https://code.visualstudio.com). 
+You can find the list of all HTTP requests in [Pacco-sample-scenario.rest](https://github.com/devmentors/Pacco.APIGateway/blob/master/Pacco-sample-scenario.rest) file placed in the root folder of [Pacco.APIGateway](https://github.com/devmentors/Pacco.APIGateway) repository.
+This file is compatible with [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) plugin for [Visual Studio Code](https://code.visualstudio.com).
